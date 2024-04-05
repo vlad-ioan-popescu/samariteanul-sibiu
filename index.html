@@ -3,190 +3,105 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Gradinita Samariteanul Sibiu</title>
 
-        <style>
-            *,
-            *::before,
-            *::after {
-                box-sizing: border-box;
-                padding: 0;
-                margin: 0;
-                border: none;
-                outline: none;
-            }
-            body {
-                background-color: #111;
-                overflow-x: hidden;
-            }
-            section {
-                min-height: 400px;
-                padding: 100px 10%;
-                color: #fff;
-                width: 100%;
-                position: relative;
-                text-align: center;
-            }
-            .cream {
-                background-color: rgb(252, 233, 224);
-            }
-            .pink {
-                background-color: #ff9aa2;
-            }
-            .blue {
-                background-color: #a1dbe6;
-            }
-            .wave1 {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                overflow: hidden;
-                line-height: 0;
-            }
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
 
-            .wave1 svg {
-                position: relative;
-                display: block;
-                width: calc(123% + 1.3px);
-                height: 183px;
-            }
+        <!-- css -->
+        <link rel="stylesheet" href="css/style.css" />
 
-            .wave1 .shape-fill {
-                fill: #ff9aa2;
-            }
-            .wave2 {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                overflow: hidden;
-                line-height: 0;
-                transform: rotate(180deg);
-            }
-
-            .wave2 svg {
-                position: relative;
-                display: block;
-                width: calc(109% + 1.3px);
-                height: 74px;
-                transform: rotateY(180deg);
-            }
-
-            .wave2 .shape-fill {
-                fill: #fce9e0;
-            }
-        </style>
+        <!-- js -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="js/scripts.js" defer></script>
     </head>
     <body>
-        <section class="blue">
-            <h1>Hello curves</h1>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Distinctio, voluptatem, dolorem ratione omnis consequatur rerum
-                et neque dolores dolorum repellendus fugiat quod eius ducimus
-                pariatur, expedita sint minima vel reiciendis.
-            </p>
-            <div class="wave2">
-                <svg
-                    data-name="Layer 1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 1200 120"
-                    preserveAspectRatio="none"
-                >
+        <!-- animated logo -->
+        <header class="lightblue">
+            <nav class="container">
+                <div class="logo-container">
+                    <img src="img/logo.png" width="118.33" id="logo" alt="logo gradinita samariteanul" />
+                    <img width="170.66" src="img/logo_rays.png" id="rays" alt="logo sun rays" />
+                </div>
+                <div class="navbar mulish-bold">
+                    <a href="#">Acasă</a>
+                    <a href="#">Despre noi</a>
+                    <a href="#">Parteneri</a>
+                    <a href="#">Activitati</a>
+                    <a href="#">inscriere si tarif</a>
+                    <a href="#">Contact</a>
+                    <a href="#" class="button pink">Suna acum</a>
+                </div>
+            </nav>
+        </header>
+        <div class="thin-header mulish-bold">
+            <div class="container">
+                <div class="navbar">
+                    <img src="img/logo.png" width="40" />
+                    <a href="#">Acasă</a>
+                    <a href="#">Despre noi</a>
+                    <a href="#">Parteneri</a>
+                    <a href="#">Activitati</a>
+                    <a href="#">inscriere si tarif</a>
+                    <a href="#">Contact</a>
+                    <a href="#" class="button pink">Suna acum</a>
+                </div>
+            </div>
+        </div>
+        <section class="lightblue">
+            <div class="hero container">
+                <img id="heroIndex" src="img/hero_index.jpg" alt="happy children" />
+                <h1>Bine ați venit la <br />grădinița noastră!</h1>
+                <img class="clouds" src="img/cloud1.png" alt="clouds" id="cloud1" />
+                <img class="clouds" src="img/cloud2.png" alt="clouds" id="cloud2" />
+                <img class="clouds" src="img/cloud4.png" alt="clouds" id="cloud4" />
+                <img class="clouds" src="img/cloud5.png" alt="clouds" id="cloud5" />
+                <img class="clouds" src="img/cloud3.png" alt="clouds" id="cloud3" />
+            </div>
+            <div class="hero-aboutus-separator">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+        <section class="cream">
+            <div class="container">
+                <div class="motto">
+                    <h2>Motto-ul nostru</h2>
+                    <p>„Învață pe copil calea pe care trebuie s-o urmeze, și când va îmbătrâni, nu se va abate de la ea.”</p>
+                    <p class="citation">Proverbe 22:6</p>
+                </div>
+                <div class="aboutus-container">
+                    <img src="img/educatoare.jpg" alt="educatoarele de la gradinita samariteanul sibiu" />
+                    <div class="text">
+                        <p>
+                            Prin intermediul gradinitei noastre dorim sa transmitem valori morale care sa modeleze caracterul copiilor nostri. Pornind de la aceasta premisa, ne propunem, prin proiectul gradinitei, sa-i învatam pe copii calea pe care
+                            sa mearga în viata, mai concret sa le cladim personalitatea si caracterul pe temelii solide, constând în principii, standarde si valori biblice, asigurând astfel garantia formarii unor cetateni demni, onesti, valorosi,
+                            creativi pentru societatea româneasca.
+                        </p>
+                        <div class="button-row">
+                            <a href="#" class="button orange">Afla mai multe</a>
+                            <a href="#" class="button pink">Contacteaza-ne</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutus-partners-separator">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                     <path
                         d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
                         opacity=".25"
-                        class="shape-fill"
-                    ></path>
+                        class="shape-fill"></path>
                     <path
                         d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
                         opacity=".5"
-                        class="shape-fill"
-                    ></path>
-                    <path
-                        d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-                        class="shape-fill"
-                    ></path>
+                        class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
                 </svg>
             </div>
         </section>
-        <section class="cream">
-            <h1>Hello curves</h1>
-            <p>
-                Nemo suscipit voluptate dolor unde ad tenetur delectus dolores,
-                eaque iste consectetur laboriosam id. Excepturi, necessitatibus?
-                Itaque autem vitae error ipsam non facilis eius vel eos, nulla
-                cumque sed eaque.
-            </p>
-        </section>
-
-        <section class="pink">
-            <h1>Hello curves</h1>
-            <p>
-                Possimus nihil ab, distinctio quo dolorum quia, dignissimos
-                voluptatibus a unde est modi id. Deserunt alias itaque quod
-                explicabo tenetur perferendis dolore mollitia delectus rem nisi,
-                iure eligendi ut consequuntur.
-            </p>
-        </section>
-        <section class="cream">
-            <h1>Hello curves</h1>
-            <p>
-                Harum nam, reiciendis rerum nemo in vero, dignissimos ad
-                recusandae tenetur placeat doloremque sunt dolore culpa est id
-                exercitationem dolor vel sequi. Officia voluptate odit ducimus
-                reprehenderit. Odit, deserunt corporis.
-            </p>
-            <div class="wave1">
-                <svg
-                    data-name="Layer 1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 1200 120"
-                    preserveAspectRatio="none"
-                >
-                    <path
-                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                        class="shape-fill"
-                    ></path>
-                </svg>
-            </div>
-        </section>
-        <section>
-            <h1>Hello curves</h1>
-            <p>
-                Eaque ad atque ut minima velit, incidunt sapiente? Quisquam
-                veritatis a perspiciatis aut adipisci molestiae? Dolores quia
-                distinctio, doloremque accusantium, tempora optio accusamus
-                magnam cumque omnis quae maxime corrupti voluptatum?
-            </p>
-        </section>
-        <section>
-            <h1>Hello curves</h1>
-            <p>
-                Ea aliquid praesentium, possimus iusto quo expedita corrupti qui
-                sunt assumenda, totam quas placeat optio nam. Sed harum rerum,
-                asperiores, totam magni aliquam illum culpa ut, nemo praesentium
-                nihil eius!
-            </p>
-        </section>
-        <section>
-            <h1>Hello curves</h1>
-            <p>
-                Ut minima tempora, doloribus, mollitia laudantium blanditiis
-                consectetur reprehenderit, laborum dolorem at possimus. Ratione
-                fugit odit laboriosam assumenda tempore maxime nobis aut, harum
-                quisquam sapiente mollitia, porro, nesciunt animi unde.
-            </p>
-        </section>
-        <section>
-            <h1>Hello curves</h1>
-            <p>
-                Voluptas nam, qui, eveniet veritatis blanditiis quos inventore,
-                deserunt dolorem iste architecto quae a. Ad placeat eligendi
-                eaque, hic reiciendis maiores, enim cumque a eos consectetur
-                neque culpa ex doloribus!
-            </p>
-        </section>
+        <section class="lightpink">something</section>
     </body>
 </html>

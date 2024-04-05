@@ -1,0 +1,394 @@
+/********* colors used **********/
+:root {
+    --clr-lightblue: #a1dbe6;
+    --clr-darkblue: #293c4f;
+    --clr-cream: #fce9e0;
+    --clr-pink: #ec6381;
+    --clr-lightpink: #ff9aa2;
+    --clr-orange: #f8b95e;
+    --clr-yellow: #fff383;
+    --clr-lightpurple: #c7ceea;
+    --clr-darkgreen: #507b4e;
+}
+
+/* ************** JOSH COMEAU RESET **************/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/****************** TYPOGRAPHY *********************/
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 200 to 1000 */
+
+.nunito-normal {
+    font-family: 'Nunito', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.nunito-bold {
+    font-family: 'Nunito', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+h1,
+h2,
+.nunito-extrabold {
+    font-family: 'Nunito', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 950;
+    font-style: normal;
+}
+body,
+.mulish-normal {
+    font-family: 'Mulish', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.mulish-bold {
+    font-family: 'Mulish', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+.mulish-extrabold {
+    font-family: 'Mulish', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+}
+a.button {
+    padding: 4px 25px;
+    border-radius: 50px;
+    color: #fff !important;
+    transition: filter 0.2s ease;
+}
+a.button:hover {
+    filter: brightness(0.9) saturate(1.2);
+}
+/****************** BODY, HTML *******************/
+body {
+    overflow-x: hidden;
+    color: var(--clr-darkblue);
+}
+
+/****************** COLORS, OTHER UTILITIES *************/
+.cream {
+    background-color: var(--clr-cream);
+}
+.darkblue {
+    background-color: var(--clr-darkblue);
+}
+.lightblue {
+    background-color: var(--clr-lightblue);
+}
+.pink {
+    background-color: var(--clr-pink);
+}
+.lightpink {
+    background-color: var(--clr-lightpink);
+}
+.orange {
+    background-color: var(--clr-orange);
+}
+.yellow {
+    background-color: var(--clr-yellow);
+}
+.lightpurple {
+    background-color: var(--clr-lightpurple);
+}
+.darkgreen {
+    background-color: var(--clr-darkgreen);
+}
+.center {
+    text-align: center;
+}
+.right {
+    text-align: right;
+}
+.left {
+    text-align: left;
+}
+.container {
+    width: min(96%, 1400px);
+    margin: 0 auto;
+}
+
+/*************** SECTIONS **************/
+section {
+    min-height: 800px;
+    padding: 30px;
+    position: relative;
+}
+
+/************** navigation *****************/
+nav {
+    display: fixed;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo-container {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    place-content: center;
+    position: relative;
+    z-index: 10;
+}
+.logo-container > * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+#logo {
+    filter: drop-shadow(4px 4px 7px rgba(255, 255, 255, 0.9));
+}
+#rays {
+    transform-origin: 0 0;
+    animation: rotate 13s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
+.navbar {
+    width: 100%;
+    height: 50px;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a {
+    display: inline-block;
+    font-size: 1.3rem;
+    color: var(--clr-darkblue);
+    position: relative;
+    transition: all 0.2s ease-in;
+}
+.navbar a:not(.button)::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 30%;
+    height: 1px;
+    width: 0;
+    border-bottom: 4px dotted var(--clr-pink);
+    transform-origin: bottom center;
+    transition: all 0.2s ease-in;
+}
+.navbar a:hover {
+    color: var(--clr-pink);
+}
+.navbar a:not(.button):hover::before {
+    width: 30%;
+}
+
+/************* thin navbar *********/
+.thin-header {
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    height: 0;
+    padding: 0;
+    overflow-y: hidden;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #fff;
+    border-bottom: 1px solid var(--clr-lightpink);
+    transition: all 0.2s linear;
+}
+.thin-header.visible {
+    height: 60px;
+    padding: 5px 0;
+    opacity: 1;
+    visibility: visible;
+}
+.thin-header .navbar {
+    padding-top: 0;
+}
+/************ MAIN PAGE **************/
+.hero {
+    position: relative;
+}
+#heroIndex {
+    position: relative;
+    top: -100px;
+}
+.hero h1 {
+    font-size: 4rem;
+    color: var(--clr-darkblue);
+    text-shadow: 4px 4px 6px #fff;
+    position: absolute;
+    top: -5%;
+    left: 40px;
+    z-index: 9;
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+/* clouds */
+.clouds {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    z-index: 20;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.3)) opacity(0.85);
+}
+.moving {
+    transition: all 30s linear;
+}
+/* moto */
+.motto {
+    aspect-ratio: 3/1;
+    width: 1000px;
+    height: auto;
+    padding: 20px 220px 60px 130px;
+    background: url('../img/bg_motto.png') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-top: -100px;
+    /* position: relative;
+    top: -80px; */
+}
+.motto .citation {
+    text-align: right;
+    font-weight: 600;
+}
+/* wave intre hero si cream */
+.hero-aboutus-separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.hero-aboutus-separator svg {
+    position: relative;
+    display: block;
+    width: calc(145% + 1.3px);
+    height: 152px;
+}
+
+.hero-aboutus-separator .shape-fill {
+    fill: var(--clr-cream);
+}
+
+/************** SECTIUNEA ABOUT US ************/
+.aboutus-container {
+    margin-top: 100px;
+    margin-bottom: 300px;
+    display: flex;
+    gap: 35px;
+    justify-content: space-between;
+    align-items: center;
+}
+.aboutus-container img {
+    width: 450px;
+    border-radius: 50%;
+}
+.aboutus-container p {
+    font-size: 1.6rem;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.button-row {
+    display: flex;
+    height: fit-content;
+    place-content: center;
+    gap: 30px;
+}
+.button-row a {
+    font-size: 1.6rem;
+}
+/*******section separator ***/
+.aboutus-partners-separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.aboutus-partners-separator svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 180px;
+}
+
+.aboutus-partners-separator .shape-fill {
+    fill: #ff9aa2;
+}
