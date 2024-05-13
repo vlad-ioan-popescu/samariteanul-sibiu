@@ -193,6 +193,7 @@ section {
     min-height: 800px;
     padding: 30px;
     position: relative;
+    margin-bottom: -1px;
 }
 
 /************** navigation *****************/
@@ -499,19 +500,184 @@ nav {
 }
 .card {
     text-align: center;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px; */
 }
 .card img {
     width: 200px;
     margin: 0 auto;
     margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+.card:hover img {
+    filter: drop-shadow(3px 3px 6px #666);
 }
 #plane {
     width: 500px;
     position: relative;
     left: -130px;
+}
+
+/************ SECTIUNEA DE INSCRIERE ***********/
+.activities-enroll-separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.activities-enroll-separator svg {
+    position: relative;
+    display: block;
+    width: calc(163% + 1.3px);
+    height: 60px;
+}
+
+.activities-enroll-separator .shape-fill {
+    fill: #fff383;
+}
+
+.enroll {
+    position: relative;
+    left: -50px;
+    top: -70px;
+    background: url('../img/splash.png') no-repeat bottom right, url('../img/bg_enroll.png') no-repeat center 10px;
+    width: 600px;
+    height: 320px;
+    padding: 60px 0;
+}
+
+.doc-list {
+    list-style-type: disc;
+    margin-left: 130px;
+    text-align: left;
+}
+.doc-list li {
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+.doc-list li::marker {
+    font-size: 2rem;
+    vertical-align: middle;
+}
+.doc-list li:nth-of-type(1)::marker {
+    color: var(--clr-lightpurple);
+}
+.doc-list li:nth-of-type(2)::marker {
+    color: var(--clr-lightpink);
+}
+.doc-list li:nth-of-type(3)::marker {
+    color: var(--clr-darkgreen);
+}
+.doc-list li:nth-of-type(4)::marker {
+    color: var(--clr-lightblue);
+}
+.doc-list li:nth-of-type(5)::marker {
+    color: var(--clr-orange);
+}
+.doc-list li:nth-of-type(6)::marker {
+    color: var(--clr-pink);
+}
+
+#butonInscriere {
+    float: right;
+    margin: 50px 50px 0 0;
+    position: relative;
+    z-index: 20;
+}
+
+.enroll-contact-separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.enroll-contact-separator svg {
+    position: relative;
+    display: block;
+    width: calc(118% + 1.3px);
+    height: 190px;
+}
+
+.enroll-contact-separator .shape-fill {
+    fill: #507b4e;
+}
+
+/********** SECTIUNEA DE CONTACT ************/
+#contact-section {
+    background: url('../img/bg_contact_section.png') no-repeat center 110%;
+}
+#contact-info {
+    margin-left: 300px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.row {
+    display: flex;
+    gap: 15px;
+    height: 60px;
+    align-items: center;
+    color: #fff;
+}
+.row img {
+    width: 40px;
+}
+.contact-footer-separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.contact-footer-separator svg {
+    position: relative;
+    display: block;
+    width: calc(138% + 1.3px);
+    height: 100px;
+}
+
+.contact-footer-separator .shape-fill {
+    fill: #a1dbe6;
+}
+
+/*********** FOOOTER *****************/
+footer {
+    background-color: var(--clr-lightblue);
+    min-height: 200px;
+    margin-top: -50px;
+}
+#footer-container img {
+    position: relative;
+    z-index: 20;
+    top: -80px;
+}
+.credits {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/************** PAGINA DESPRE NOI *************************/
+#girl {
+    position: relative;
+    top: -400px;
+}
+#viziune {
+    width: 900px;
+    height: 260px;
+    margin-left: 100px;
+    padding: 80px 0 0 40px;
+    background: url('../img/bg_viziune.png') no-repeat center center;
 }
