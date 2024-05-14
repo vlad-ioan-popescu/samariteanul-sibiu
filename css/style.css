@@ -681,3 +681,57 @@ footer {
     padding: 80px 0 0 40px;
     background: url('../img/bg_viziune.png') no-repeat center center;
 }
+#misiune {
+    background: url('../img/bg_misiune.png') no-repeat center center;
+    width: 550px;
+    height: 260px;
+    margin-left: 700px;
+    padding: 80px 30px 0 10px;
+}
+#echipa {
+    background: url('../img/bg_echipa.png') no-repeat center center;
+    width: 850px;
+    height: 280px;
+    margin-left: 200px;
+    padding: 110px 0 0 60px;
+}
+.capital {
+    font-family: 'Nunito';
+    border-radius: 10px;
+    padding: 2px 6px;
+    margin-right: 3px;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #fff;
+}
+.echipa-container {
+    display: flex;
+    flex: 1;
+    gap: 25px;
+    align-items: center;
+}
+.echipa-container img {
+    width: 500px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 15px solid lightblue;
+}
+
+/************* PAGINA DE PARTENERI **************/
+p.list {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
+    color: #fff;
+    line-height: 2;
+}
+#asociatii {
+    background: url('../img/bg_misiune.png') no-repeat center center;
+    background-size: cover;
+    width: 760px;
+    height: 290px;
+    margin-left: 100px;
+    padding: 100px 10px 0 20px;
+}
+#profesori {
+}
