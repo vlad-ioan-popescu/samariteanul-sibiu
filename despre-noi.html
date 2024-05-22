@@ -6,7 +6,7 @@
         <title>Grădinița Samariteanul Sibiu</title>
 
         <!-- favicon -->
-        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
 
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,11 +26,15 @@
             float: right;
             position: relative;
             z-index: 20;
+            margin-bottom: -170px;
         }
         .container > p {
             width: 70%;
             margin: 30px auto;
             margin-bottom: 60px;
+        }
+        #mainContainer {
+            margin-top: -160px;
         }
     </style>
     <body>
@@ -45,9 +49,10 @@
                     <a href="index.html">Acasă</a>
                     <a class="current" href="#">Despre noi</a>
                     <a href="parteneri.html">Parteneri</a>
-                    <a href="#">Activități</a>
-                    <a href="#">Înscriere și tarif</a>
-                    <a href="#">Contact</a>
+                    <a href="activitati.html">Activități</a>
+                    <a href="galerie-foto.html">Galerie foto</a>
+                    <a href="inscriere.html">Înscriere</a>
+                    <a href="contact.html">Contact</a>
                     <a href="#" class="button pink">Sună acum</a>
                 </div>
             </nav>
@@ -59,9 +64,10 @@
                     <a href="index.html">Acasă</a>
                     <a class="current" href="#">Despre noi</a>
                     <a href="parteneri.html">Parteneri</a>
-                    <a href="#">Activități</a>
-                    <a href="#">Înscriere și tarif</a>
-                    <a href="#">Contact</a>
+                    <a href="activitati.html">Activități</a>
+                    <a href="galerie-foto.html">Galerie foto</a>
+                    <a href="inscriere.html">Înscriere</a>
+                    <a href="contact.html">Contact</a>
                     <a href="#" class="button pink">Sună acum</a>
                 </div>
             </div>
@@ -69,14 +75,10 @@
         <section class="cream">
             <div class="hero container">
                 <img id="heroIndex" src="img/hero_desprenoi.png" alt="happy children with train" />
-                <h2 class="light center" style="position: absolute; right: 20px; top: -70px">Permite-ne să ne prezentăm</h2>
-                <img class="clouds" src="img/cloud1.png" alt="clouds" id="cloud1" />
-                <img class="clouds" src="img/cloud2.png" alt="clouds" id="cloud2" />
-                <img class="clouds" src="img/cloud4.png" alt="clouds" id="cloud4" />
-                <img class="clouds" src="img/cloud5.png" alt="clouds" id="cloud5" />
+                <h2 class="light center" style="position: absolute; right: 55px; top: -70px">Permite-ne să ne prezentăm</h2>
             </div>
 
-            <div class="container center">
+            <div class="container center" id="mainContainer">
                 <div class="motto">
                     <h3>Motto-ul nostru</h3>
                     <p>„Învață pe copil calea pe care trebuie s-o urmeze, și când va îmbătrâni, nu se va abate de la ea.”</p>

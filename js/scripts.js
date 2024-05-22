@@ -1,9 +1,17 @@
 $(document).ready(function () {
     // random movement la nori
     $('.clouds').each(function () {
+        let posX = this.offsetX;
+
+        let posY = this.offsetY;
+
         let randX = Math.round(Math.random() * 10);
 
         let randY = Math.round(Math.random() * 10);
+
+        if (Math.abs(randX - posX) <= 200) {
+            randX = randX > posX ? randX + 200 : randX - 200;
+        }
 
         $(this).css('top', `${randY}0%`);
 
@@ -46,4 +54,9 @@ function moveClouds() {
 
         $(this).css('left', `${randX}0%`);
     });
+}
+
+// trimite formularul
+function sendForm() {
+    $('#sendButton').toggleClass('sending');
 }

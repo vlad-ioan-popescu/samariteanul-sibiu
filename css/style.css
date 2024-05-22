@@ -9,6 +9,7 @@
     --clr-yellow: #fff383;
     --clr-lightpurple: #c7ceea;
     --clr-darkgreen: #507b4e;
+    --clr-red: #e95323;
 }
 
 /* ************** JOSH COMEAU RESET **************/
@@ -97,11 +98,12 @@ h2 {
     font-size: 3.5rem;
     margin-bottom: 2rem;
 }
-h2.light {
+h2.light,
+h3.light {
     color: #fff;
 }
 h3 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 16px;
 }
 body,
@@ -139,6 +141,9 @@ a.button {
 }
 a.button:hover {
     filter: brightness(1.1) saturate(1.2);
+}
+strong {
+    color: var(--clr-pink);
 }
 /****************** BODY, HTML *******************/
 body {
@@ -259,7 +264,8 @@ nav {
     transform-origin: bottom center;
     transition: all 0.2s ease-in;
 }
-.navbar a:hover {
+.navbar a:hover,
+.navbar a.current {
     color: var(--clr-pink);
 }
 .navbar a:not(.button):hover::before {
@@ -324,7 +330,7 @@ nav {
     aspect-ratio: 3/1;
     width: 1040px;
     height: auto;
-    padding: 20px 230px 60px 140px;
+    padding: 30px 230px 60px 140px;
     background: url('../img/bg_motto.png') no-repeat center center;
     background-size: cover;
     text-align: center;
@@ -579,7 +585,9 @@ nav {
 .doc-list li:nth-of-type(6)::marker {
     color: var(--clr-pink);
 }
-
+.no-color li::marker {
+    color: var(--clr-darkblue) !important;
+}
 #butonInscriere {
     float: right;
     margin: 50px 50px 0 0;
@@ -692,7 +700,7 @@ footer {
     background: url('../img/bg_echipa.png') no-repeat center center;
     width: 850px;
     height: 280px;
-    margin-left: 200px;
+    margin-left: 100px;
     padding: 110px 0 0 60px;
 }
 .capital {
@@ -708,10 +716,12 @@ footer {
     display: flex;
     flex: 1;
     gap: 25px;
+    /* justify-content: space-around; */
     align-items: center;
+    margin: 0 50px 0 100px;
 }
 .echipa-container img {
-    width: 500px;
+    width: 460px;
     aspect-ratio: 1/1;
     border-radius: 50%;
     border: 15px solid lightblue;
@@ -734,4 +744,228 @@ p.list {
     padding: 100px 10px 0 20px;
 }
 #profesori {
+    background: url('../img/bg_orar.png') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    width: fit-content;
+    height: auto;
+    line-height: 1.3;
+    margin-left: 850px;
+    margin-top: -100px;
+    padding: 80px 10px 20px 80px;
+}
+#institutii {
+    background: url('../img/bg_institutii.png') no-repeat center center;
+    background-size: cover;
+    width: 760px;
+    height: 290px;
+    margin-left: 100px;
+    padding: 50px 10px 0 0px;
+}
+
+/****************** PAGINA DE ACTIVITATI ******************/
+.flex-group {
+    display: flex;
+    gap: 40px;
+    align-items: flex-end;
+}
+.flex-group p {
+    margin-bottom: 50px;
+}
+#contact-banner {
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 150px auto;
+    /* border: 3px solid var(--clr-pink);
+    padding: 10px;
+    border-radius: 30px; */
+}
+#contact-banner a {
+    transition: filter 0.2s linear;
+}
+#contact-banner a:hover {
+    filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.5));
+}
+#educatie {
+    background: url('../img/bg_educatie.png') no-repeat center center;
+    background-size: contain;
+    width: 860px;
+    height: 250px;
+    margin-left: 100px;
+    padding: 80px 10px 20px 0;
+}
+#educatie h2 {
+    margin-left: 20px;
+}
+#limbi {
+    background: url('../img/bg_limbi.png') no-repeat center center;
+    background-size: contain;
+    width: 860px;
+    height: 250px;
+    margin-left: 600px;
+    padding: 65px 0 20px 10px;
+}
+#extra {
+    background: url('../img/bg_extra.png') no-repeat center center;
+    background-size: cover;
+    width: 760px;
+    height: 290px;
+    margin-left: 100px;
+    padding: 100px 0 20px 20px;
+}
+
+/****************** PAGINA DE INSCRIERE *****************/
+#inscriere-headline {
+    background: url('../img/bg_inscriere.png') no-repeat center center;
+    background-size: cover;
+    width: 970px;
+    height: 430px;
+    margin: -300px 0 100px 200px;
+    padding: 100px 0 20px 0;
+    z-index: 10;
+    position: relative;
+}
+
+/******** formularul de inscriere *******/
+#enroll-container {
+    align-items: start;
+}
+#enroll-container > * {
+    flex: 1;
+}
+#acte {
+    background: var(--clr-red);
+    border-radius: 30px 30px 0 30px;
+    padding: 40px;
+    margin-top: 20px;
+}
+#acte p,
+#acte li {
+    color: #fff;
+}
+#acte ul {
+    margin-left: 20px;
+}
+#enroll-form {
+    font-size: 1.6rem;
+}
+#enroll-form span {
+    font-size: 1.3rem;
+}
+label,
+input:not([type='button']),
+textarea {
+    display: block;
+    text-align: left;
+    color: var(--clr-darkblue);
+}
+input:not([type='button']),
+textarea {
+    display: block;
+    background: #fff;
+    border: 2px solid #666;
+    padding: 4px 10px 4px 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 500px;
+}
+#bifa {
+    appearance: none;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    margin-bottom: -5px;
+    position: relative;
+}
+#bifa:checked::after {
+    content: '✔';
+    font-size: 3.5rem;
+    position: absolute;
+    inset: 0;
+    top: -20px;
+}
+#sendButton {
+    display: flex;
+    gap: 10px;
+    max-width: fit-content;
+    height: fit-content;
+    align-items: center;
+}
+#sendButton img {
+    display: none;
+}
+#sendButton.sending img {
+    display: inline;
+}
+
+#tarif {
+    background: url('../img/bg_tarif.png') no-repeat center center;
+    background-size: contain;
+    width: 400px;
+    height: 200px;
+    margin-left: 700px;
+    padding: 50px 0 20px 0;
+}
+.program {
+    align-items: start;
+}
+.program > * {
+    flex: 1;
+    padding-top: 40px;
+}
+.program h3 {
+    margin-bottom: 50px;
+}
+.program h2 {
+    margin-bottom: 85px;
+}
+.program div:nth-of-type(1) {
+    background: url('../img/bg_misiune.png') no-repeat top center;
+    /* background-size: contain; */
+}
+.program div:nth-of-type(2) {
+    background: url('../img/bg_tarif.png') no-repeat top center;
+}
+/************** PAGINA DE CONTACT **********/
+.hero-contact-separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.hero-contact-separator svg {
+    position: relative;
+    display: block;
+    width: calc(127% + 1.3px);
+    height: 91px;
+}
+
+.hero-contact-separator .shape-fill {
+    fill: #507b4e;
+}
+#contact-container {
+    align-items: center;
+}
+#contact-container > * {
+    flex: 1;
+}
+#contact-title {
+    background: url('../img/bg_contact_form.png') no-repeat center center;
+    background-size: contain;
+    min-height: 300px;
+    padding-top: 55px;
+}
+#contact-form {
+    font-size: 1.6rem;
+}
+#contact-form span {
+    font-size: 1.3rem;
+}
+#contact-form label {
+    color: #fff;
 }
