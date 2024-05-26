@@ -1,27 +1,26 @@
 $(document).ready(function () {
     // random movement la nori
     $('.clouds').each(function () {
-        let posX = this.offsetX;
-
-        let posY = this.offsetY;
-
+        let posX = $(this).offset().left / 10;
+        console.log(posX);
         let randX = Math.round(Math.random() * 10);
 
         let randY = Math.round(Math.random() * 10);
 
-        if (Math.abs(randX - posX) <= 200) {
-            randX = randX > posX ? randX + 200 : randX - 200;
+        if (Math.abs(randX - posX) <= 3) {
+            randX = randX > posX ? randX + 3 : randX - 3;
         }
 
         $(this).css('top', `${randY}0%`);
 
         $(this).css('left', `${randX}0%`);
     });
-    setTimeout(moveClouds, 500);
 
+    // repetir
+    setTimeout(moveClouds, 500);
     setInterval(moveClouds, 30000);
 
-    // intersection observer la header
+    // intersection observer la header, pentru meniu
     const header = document.querySelector('header');
 
     const nav = $('.thin-header');
@@ -39,7 +38,6 @@ $(document).ready(function () {
             root: null,
             threshold: 0,
             rootMargin: `-50px`,
-            // rootMargin: `-50px`,
         }
     );
 

@@ -8,6 +8,7 @@
     --clr-orange: #f8b95e;
     --clr-yellow: #fff383;
     --clr-lightpurple: #c7ceea;
+    --clr-darkpurple: #7f8394;
     --clr-darkgreen: #507b4e;
     --clr-red: #e95323;
 }
@@ -331,7 +332,7 @@ nav {
     width: 1040px;
     height: auto;
     padding: 30px 230px 60px 140px;
-    background: url('../img/bg_motto.png') no-repeat center center;
+    background: url('../img/bg_motto.webp') no-repeat center center;
     background-size: cover;
     text-align: center;
     color: #fff;
@@ -402,7 +403,7 @@ nav {
     gap: 30px;
 }
 .orar h3 {
-    background: url('../img/bg_orar.png') no-repeat center center;
+    background: url('../img/bg_orar.webp') no-repeat center center;
     background-size: contain;
     color: #fff;
     width: fit-content;
@@ -547,11 +548,11 @@ nav {
 .enroll {
     position: relative;
     left: -50px;
-    top: -70px;
-    background: url('../img/splash.png') no-repeat bottom right, url('../img/bg_enroll.png') no-repeat center 10px;
-    width: 600px;
-    height: 320px;
-    padding: 60px 0;
+    top: -100px;
+    background: url('../img/splash.webp') no-repeat bottom right, url('../img/bg_enroll.webp') no-repeat center top;
+    width: 700px;
+    height: 350px;
+    padding: 60px 10px 10px 10px;
 }
 
 .doc-list {
@@ -589,8 +590,6 @@ nav {
     color: var(--clr-darkblue) !important;
 }
 #butonInscriere {
-    float: right;
-    margin: 50px 50px 0 0;
     position: relative;
     z-index: 20;
 }
@@ -618,7 +617,7 @@ nav {
 
 /********** SECTIUNEA DE CONTACT ************/
 #contact-section {
-    background: url('../img/bg_contact_section.png') no-repeat center 110%;
+    background: #507b4e url('../img/bg_contact_section.webp') no-repeat 90% 120%;
 }
 #contact-info {
     margin-left: 300px;
@@ -687,17 +686,17 @@ footer {
     height: 260px;
     margin-left: 100px;
     padding: 80px 0 0 40px;
-    background: url('../img/bg_viziune.png') no-repeat center center;
+    background: url('../img/bg_viziune.webp') no-repeat center center;
 }
 #misiune {
-    background: url('../img/bg_misiune.png') no-repeat center center;
+    background: url('../img/bg_misiune.webp') no-repeat center center;
     width: 550px;
     height: 260px;
     margin-left: 700px;
     padding: 80px 30px 0 10px;
 }
 #echipa {
-    background: url('../img/bg_echipa.png') no-repeat center center;
+    background: url('../img/bg_echipa.webp') no-repeat center center;
     width: 850px;
     height: 280px;
     margin-left: 100px;
@@ -720,6 +719,9 @@ footer {
     align-items: center;
     margin: 0 50px 0 100px;
 }
+.echipa-container p {
+    font-size: 1.8rem;
+}
 .echipa-container img {
     width: 460px;
     aspect-ratio: 1/1;
@@ -736,7 +738,7 @@ p.list {
     line-height: 2;
 }
 #asociatii {
-    background: url('../img/bg_misiune.png') no-repeat center center;
+    background: url('../img/bg_misiune.webp') no-repeat center center;
     background-size: cover;
     width: 760px;
     height: 290px;
@@ -744,7 +746,7 @@ p.list {
     padding: 100px 10px 0 20px;
 }
 #profesori {
-    background: url('../img/bg_orar.png') no-repeat center center;
+    background: url('../img/bg_orar.webp') no-repeat center center;
     background-size: cover;
     color: #fff;
     width: fit-content;
@@ -755,7 +757,7 @@ p.list {
     padding: 80px 10px 20px 80px;
 }
 #institutii {
-    background: url('../img/bg_institutii.png') no-repeat center center;
+    background: url('../img/bg_institutii.webp') no-repeat center center;
     background-size: cover;
     width: 760px;
     height: 290px;
@@ -788,7 +790,7 @@ p.list {
     filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.5));
 }
 #educatie {
-    background: url('../img/bg_educatie.png') no-repeat center center;
+    background: url('../img/bg_educatie.webp') no-repeat center center;
     background-size: contain;
     width: 860px;
     height: 250px;
@@ -799,15 +801,15 @@ p.list {
     margin-left: 20px;
 }
 #limbi {
-    background: url('../img/bg_limbi.png') no-repeat center center;
+    background: url('../img/bg_limbi.webp') no-repeat center center;
     background-size: contain;
     width: 860px;
     height: 250px;
     margin-left: 600px;
-    padding: 65px 0 20px 10px;
+    padding: 95px 0 20px 10px;
 }
 #extra {
-    background: url('../img/bg_extra.png') no-repeat center center;
+    background: url('../img/bg_extra.webp') no-repeat center center;
     background-size: cover;
     width: 760px;
     height: 290px;
@@ -815,9 +817,38 @@ p.list {
     padding: 100px 0 20px 20px;
 }
 
+/******************* PAGINA CU GALERIA DE IMAGINI ****************/
+.photo-container {
+    background-color: var(--clr-darkpurple);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    /* grid-template-rows: repeat(auto-fill, minmax(320px, 1fr)); */
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 100px;
+}
+/* .photo {
+    width: 100%;
+    height: 100%;
+    background-color: #1e2832;
+} */
+.corner-image {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+.all-row {
+    grid-column: span 3;
+}
+.two-cols {
+    grid-column: span 2;
+}
+.two-rows {
+    grid-row: span 2;
+}
+
 /****************** PAGINA DE INSCRIERE *****************/
 #inscriere-headline {
-    background: url('../img/bg_inscriere.png') no-repeat center center;
+    background: url('../img/bg_inscriere.webp') no-repeat center center;
     background-size: cover;
     width: 970px;
     height: 430px;
@@ -900,7 +931,7 @@ textarea {
 }
 
 #tarif {
-    background: url('../img/bg_tarif.png') no-repeat center center;
+    background: url('../img/bg_tarif.webp') no-repeat center center;
     background-size: contain;
     width: 400px;
     height: 200px;
@@ -921,11 +952,11 @@ textarea {
     margin-bottom: 85px;
 }
 .program div:nth-of-type(1) {
-    background: url('../img/bg_misiune.png') no-repeat top center;
+    background: url('../img/bg_misiune.webp') no-repeat top center;
     /* background-size: contain; */
 }
 .program div:nth-of-type(2) {
-    background: url('../img/bg_tarif.png') no-repeat top center;
+    background: url('../img/bg_tarif.webp') no-repeat top center;
 }
 /************** PAGINA DE CONTACT **********/
 .hero-contact-separator {
@@ -955,7 +986,7 @@ textarea {
     flex: 1;
 }
 #contact-title {
-    background: url('../img/bg_contact_form.png') no-repeat center center;
+    background: url('../img/bg_contact_form.webp') no-repeat center center;
     background-size: contain;
     min-height: 300px;
     padding-top: 55px;
