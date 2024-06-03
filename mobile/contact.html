@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grădinița Samariteanul Sibiu</title>
+
+        <!-- redirectionare de pe desktop pe mobil -->
+        <script>
+            if (screen.width > 1000) {
+                window.location = '../contact.html';
+            }
+        </script>
+
+        <!-- favicon -->
+        <link rel="icon" href="/favicon.ico" />
+
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
+
+        <!-- css -->
+        <link rel="stylesheet" href="../css/mobile.css" />
+
+        <!-- js -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="../js/scripts.js" defer></script>
+    </head>
+    <!-- stiluri proprii paginii, adaptari -->
+    <style></style>
+    <body>
+        <!-- animated logo -->
+        <header class="lightblue">
+            <nav class="container flex-group">
+                <div class="logo-container">
+                    <img src="../img/logo.webp" width="70%" id="logo" alt="logo gradinita samariteanul" />
+                    <img width="170.66" src="../img/logo_rays.webp" id="rays" alt="logo sun rays" />
+                </div>
+                <img src="../img/mobile_header.png" alt="bee in clouds" />
+                <img src="../img/mobile_menu_open.png" id="menuButton" alt="open menu icon" />
+            </nav>
+            <img class="clouds mobile-cloud" width="100" src="../img/cloud1.webp" alt="clouds" id="cloud1" />
+            <div class="header-separator">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </header>
+        <div id="menu">
+            <a href="index.html">Acasă</a>
+            <a href="despre-noi.html">Despre noi</a>
+            <a href="parteneri.html">Parteneri</a>
+            <a href="activitati.html">Activități</a>
+            <a href="galerie-foto.html">Galerie foto</a>
+            <a href="inscriere.html">Înscriere</a>
+            <a class="current" href="contact.html">Contact</a>
+            <a href="tel:0744-198-183"><img src="../img/icon_whatsapp.webp" alt="whatsapp icon" /></a>
+        </div>
+        <div style="height: 170px"></div>
+        <section class="lightblue">
+            <div class="hero">
+                <img id="heroIndex" src="../img/mobile/mobile_hero_contact.webp" alt="happy children laying in the grass" />
+            </div>
+        </section>
+
+        <section class="darkgreen">
+            <div class="hero-contact-separator">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+                </svg>
+            </div>
+            <div style="height: 100px"></div>
+            <h2 class="center light">Iată cum ne poți contacta:</h2>
+            <div id="contact-info">
+                <div class="row">
+                    <img src="../img/icon_phone.webp" alt="icon phone" />
+                    <p>0740.497.936</p>
+                </div>
+                <div class="row">
+                    <img src="../img/icon_location.webp" alt="icon location" />
+                    <p>Str. Verzăriei nr. 2, Sibiu</p>
+                </div>
+                <div class="row">
+                    <img src="../img/icon_fb.webp" alt="icon fb" />
+                    <p>Grădinița Samariteanul Sibiu</p>
+                </div>
+                <div class="row">
+                    <img src="../img/icon_email.webp" alt="icon email" />
+                    <p>gradinita_samariteanul@yahoo.com</p>
+                </div>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.8883738458862!2d24.1241159123824!3d45.79346401128808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474c67f136c6ab97%3A0x8f685cb19686a615!2sGr%C8%A7dinita%20%22Samariteanul%22!5e0!3m2!1sen!2sro!4v1716391960425!5m2!1sen!2sro"
+                width="96%"
+                height="550"
+                style="border: 0; margin: 60px auto"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <h2 class="light">Formular <br />de contact</h2>
+            <div class="right" id="enroll-form">
+                <form>
+                    <label class="light" for="#nume">Numele și prenumele </label>
+                    <input type="text" name="nume" />
+                    <label class="light" for="#telefon">Numărul de telefon</label>
+                    <input type="text" name="telefon" />
+                    <label class="light" for="#email">Adresa de email</label>
+                    <input type="text" name="email" />
+                    <label class="light" for="#mesaj">Mesaj</label>
+                    <textarea name="mesaj" id="mesaj" rows="6"></textarea>
+                    <a id="sendButton" href="javasxcript:;" onclick="sendForm();" class="button pink">Trimite<img src="../img/spinner.gif" alt="loading spinner" /></a>
+                </form>
+            </div>
+
+            <div class="form230">
+                <p>Poți sprijini grădinița noastră redirecționând 3,5% din impozitul tău. Nu te costă nimic! Descarcă formularul, completează-l și trimite-l sau adu-l la grădiniță până în 20 mai.</p>
+                <a href="/pdf/230.pdf" class="button darkgreen">Descarcă formularul 230 (PDF)</a>
+            </div>
+            <div style="height: 100px"></div>
+            <div class="contact-footer-separator">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+        <footer>
+            <div class="container center" id="footer-container">
+                <img src="../img/bg_footer.webp" alt="footer images" />
+                <div class="credits">
+                    <p>Designed and developed by</p>
+                    <a href="http://karisdev.ro"><img src="../img/logo_karis.webp" height="60" alt="logo karis dev" /></a>
+                </div>
+            </div>
+        </footer>
+        <script></script>
+    </body>
+</html>

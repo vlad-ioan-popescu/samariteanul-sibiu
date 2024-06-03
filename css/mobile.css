@@ -1,0 +1,676 @@
+/********* colors used **********/
+:root {
+    --clr-lightblue: #a1dbe6;
+    --clr-darkblue: #293c4f;
+    --clr-cream: #fce9e0;
+    --clr-pink: #ec6381;
+    --clr-lightpink: #ff9aa2;
+    --clr-orange: #f8b95e;
+    --clr-yellow: #fff383;
+    --clr-lightpurple: #c7ceea;
+    --clr-darkpurple: #7f8394;
+    --clr-darkgreen: #507b4e;
+    --clr-red: #e95323;
+}
+
+/* ************** JOSH COMEAU RESET **************/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/****************** TYPOGRAPHY *********************/
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 200 to 1000 */
+
+.nunito-normal {
+    font-family: 'Nunito', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.nunito-bold {
+    font-family: 'Nunito', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+h1,
+h2,
+h3,
+.nunito-extrabold {
+    font-family: 'Nunito', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 950;
+    font-style: normal;
+    width: 96%;
+    margin: 0 auto;
+}
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+h2.light,
+h3.light {
+    color: #fff;
+}
+h3 {
+    font-size: 1.9rem;
+    margin-bottom: 16px;
+}
+body,
+.mulish-normal {
+    font-family: 'Mulish', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.mulish-bold {
+    font-family: 'Mulish', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+.mulish-extrabold {
+    font-family: 'Mulish', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+p {
+    font-size: 1.4rem;
+    font-style: italic;
+    margin: 20px;
+}
+a {
+    text-decoration: none;
+}
+a.button {
+    padding: 4px 25px;
+    border-radius: 50px;
+    color: #fff !important;
+    transition: filter 0.2s ease;
+    font-size: 1.6rem;
+    display: block;
+    max-width: fit-content;
+    margin: 10px auto;
+}
+a.button:active {
+    filter: brightness(1.1) saturate(1.2);
+}
+strong {
+    color: var(--clr-pink);
+}
+li {
+    text-align: left;
+}
+/****************** COLORS, OTHER UTILITIES *************/
+.cream {
+    background-color: var(--clr-cream);
+}
+.darkblue {
+    background-color: var(--clr-darkblue);
+}
+.lightblue {
+    background-color: var(--clr-lightblue);
+}
+.pink {
+    background-color: var(--clr-pink);
+}
+.lightpink {
+    background-color: var(--clr-lightpink);
+}
+.orange {
+    background-color: var(--clr-orange);
+}
+.yellow {
+    background-color: var(--clr-yellow);
+}
+.lightpurple {
+    background-color: var(--clr-lightpurple);
+}
+.darkgreen {
+    background-color: var(--clr-darkgreen);
+}
+.center {
+    text-align: center;
+}
+.right {
+    text-align: right;
+}
+.left {
+    text-align: left;
+}
+.container {
+    width: 96%;
+    margin: 0 auto;
+}
+.flex-group {
+    gap: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/********************************************* AICI INCEPE ****************************************/
+/**************************************************************************************************/
+
+/****************** BODY, HTML, SECTIONS *******************/
+body {
+    overflow-x: hidden;
+    color: var(--clr-darkblue);
+    background-color: var(--clr-lightblue);
+    text-align: center;
+}
+
+/*************** SECTIONS **************/
+section {
+    width: 100%;
+    /* min-height: 300px; */
+    position: relative;
+    text-align: center;
+}
+
+/*************** HEADER *************/
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 50;
+}
+/************** navigation *****************/
+nav {
+    /* display: fixed; */
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo-container {
+    width: 114px;
+    height: 114px;
+    display: flex;
+    place-content: center;
+    position: relative;
+    z-index: 10;
+}
+.logo-container > * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+#logo {
+    filter: drop-shadow(4px 4px 7px rgba(255, 255, 255, 0.9));
+}
+#rays {
+    transform-origin: 0 0;
+    animation: rotate 13s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
+
+#menuButton {
+    height: 50px;
+    width: 50px;
+}
+
+/* clouds */
+.clouds {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    z-index: 20;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.3)) opacity(0.85);
+}
+.moving {
+    transition: all 30s linear;
+}
+
+/******* partea de jos a header-ului ******/
+.header-separator {
+    position: absolute;
+    bottom: -38px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.header-separator svg {
+    position: relative;
+    display: block;
+    width: calc(213% + 1.3px);
+    height: 40px;
+}
+
+.header-separator .shape-fill {
+    fill: var(--clr-lightblue);
+}
+
+/********** meniul ****************/
+#menu {
+    padding-top: 50px;
+    position: fixed;
+    z-index: 40;
+    inset: 0;
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #fce9e0;
+    transition-property: display, opacity;
+    transition-duration: 0.6s;
+    transition-behavior: allow-discrete;
+}
+#menu.open {
+    display: flex;
+    opacity: 1;
+
+    @starting-style {
+        opacity: 0;
+    }
+}
+
+#menu a {
+    font-size: 1.8rem;
+    color: var(--clr-darkblue);
+    font-weight: bold;
+    font-style: italic;
+}
+#menu a:active,
+#menu a.current {
+    color: var(--clr-pink);
+}
+
+/******************** PAGINA DE INDEX *************/
+/* moto */
+.motto-section {
+    background: var(--clr-pink) url('../img/mobile_blue_splash.png') no-repeat right 90%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.motto {
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.motto .citation {
+    text-align: right;
+    font-weight: 600;
+}
+.motto-aboutus-separator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.motto-aboutus-separator svg {
+    position: relative;
+    display: block;
+    width: calc(123% + 1.3px);
+    height: 35px;
+}
+
+.motto-aboutus-separator .shape-fill {
+    fill: #ec6381;
+}
+
+.orar {
+    margin-top: 50px;
+}
+.form230 {
+    background: #fff;
+    padding: 30px 10px;
+    border: 5px solid var(--clr-darkgreen);
+}
+
+/*********** sectiunea de parteneri **********/
+
+.partner-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+/* separator */
+.partners-activities-separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.partners-activities-separator svg {
+    position: relative;
+    display: block;
+    width: calc(218% + 1.3px);
+    height: 48px;
+}
+
+.partners-activities-separator .shape-fill {
+    fill: #c7ceea;
+}
+
+/******* sectiunea de activitati ***************/
+.activities-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.card p {
+    font-weight: bold;
+}
+.activities-enroll-separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.activities-enroll-separator svg {
+    position: relative;
+    display: block;
+    width: calc(163% + 1.3px);
+    height: 60px;
+}
+
+.activities-enroll-separator .shape-fill {
+    fill: #fff383;
+}
+
+/************ sectiunea de inscriere *********/
+.doc-list {
+    list-style-type: disc;
+    margin-left: 10px;
+    text-align: left;
+}
+.doc-list li {
+    font-size: 1.3rem;
+    vertical-align: middle;
+}
+.doc-list li::marker {
+    font-size: 2rem;
+    vertical-align: middle;
+}
+.doc-list li:nth-of-type(1)::marker {
+    color: var(--clr-lightpurple);
+}
+.doc-list li:nth-of-type(2)::marker {
+    color: var(--clr-lightpink);
+}
+.doc-list li:nth-of-type(3)::marker {
+    color: var(--clr-darkgreen);
+}
+.doc-list li:nth-of-type(4)::marker {
+    color: var(--clr-lightblue);
+}
+.doc-list li:nth-of-type(5)::marker {
+    color: var(--clr-orange);
+}
+.doc-list li:nth-of-type(6)::marker {
+    color: var(--clr-pink);
+}
+.no-color li::marker {
+    color: var(--clr-darkblue) !important;
+}
+.enroll-contact-separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.enroll-contact-separator svg {
+    position: relative;
+    display: block;
+    width: calc(118% + 1.3px);
+    height: 60px;
+}
+
+.enroll-contact-separator .shape-fill {
+    fill: #507b4e;
+}
+
+/********* sectiunea de contact ********************/
+#contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    color: #fff;
+}
+#contact-info .row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+}
+#contact-info p {
+    margin-top: 5px;
+}
+
+/*************** FOOTER ****************/
+.contact-footer-separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.contact-footer-separator svg {
+    position: relative;
+    display: block;
+    width: calc(138% + 1.3px);
+    height: 60px;
+}
+
+.contact-footer-separator .shape-fill {
+    fill: #a1dbe6;
+}
+.credits {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 90px;
+}
+
+/******************* PAGINA DESPRE NOI **************/
+#girl {
+    margin: 20px auto;
+}
+.capital {
+    font-family: 'Nunito';
+    border-radius: 10px;
+    padding: 2px 6px;
+    margin-right: 3px;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+/****************** pagina de activitati *****************/
+#contact-banner {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    margin: 20px auto;
+    border-top: 5px solid var(--clr-pink);
+    border-bottom: 5px solid var(--clr-pink);
+}
+#contact-banner img {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/************ galeria foto ***************/
+.photo-container {
+    background-color: var(--clr-darkpurple);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    /* grid-template-rows: repeat(auto-fill, minmax(320px, 1fr)); */
+    gap: 5px;
+    padding: 10px 0;
+    margin-bottom: 50px;
+}
+
+/*************** inscriere ************/
+#enroll-form {
+    font-size: 1.3rem;
+    width: 96%;
+    margin: 20px auto;
+}
+#enroll-form span {
+    font-size: 1.3rem;
+}
+label,
+input:not([type='button']),
+textarea {
+    display: block;
+    text-align: left;
+    color: var(--clr-darkblue);
+}
+input:not([type='button']),
+textarea {
+    display: block;
+    background: #fff;
+    border: 2px solid #666;
+    padding: 4px 10px 4px 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+#bifa {
+    appearance: none;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    margin-bottom: -5px;
+    position: relative;
+}
+#bifa:checked::after {
+    content: '✔';
+    font-size: 3.5rem;
+    position: absolute;
+    inset: 0;
+    top: -20px;
+}
+#sendButton {
+    display: flex;
+    gap: 10px;
+    max-width: fit-content;
+    height: fit-content;
+    align-items: center;
+}
+#sendButton img {
+    display: none;
+}
+#sendButton.sending img {
+    display: inline;
+}
+
+/************** PAGINA DE CONTACT **********/
+.hero-contact-separator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.hero-contact-separator svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+    transform: rotateY(180deg);
+}
+
+.hero-contact-separator .shape-fill {
+    fill: #a1dbe6;
+}
