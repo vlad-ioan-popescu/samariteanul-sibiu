@@ -775,13 +775,13 @@ p.list {
     margin-bottom: 50px;
 }
 #contact-banner {
+    display: flex;
     align-items: center;
     justify-content: center;
+    gap: 25px;
     width: 80%;
     margin: 150px auto;
-    /* border: 3px solid var(--clr-pink);
     padding: 10px;
-    border-radius: 30px; */
 }
 #contact-banner a {
     transition: filter 0.2s linear;
