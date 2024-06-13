@@ -63,7 +63,63 @@ function moveClouds() {
     });
 }
 
-// trimite formularul
-function sendForm() {
-    $('#sendButton').toggleClass('sending');
+//  validari formular (erori)
+
+$("[type='text'], textarea").on('blur', function () {
+    if (!this.value) {
+        $(this).addClass('error');
+    } else {
+        $(this).removeClass('error');
+    }
+});
+$('#bifa').on('click', function () {
+    if (this.checked) {
+        $(this).removeClass('error');
+    } else {
+        $(this).addClass('error');
+    }
+});
+// validare si trimitere formular
+function sendForm(button) {
+    $(button).addClass('sending');
+    let errors = 0;
+    let formData = new FormData();
+    const mailType = $(this).attr('id') == 'enrollButton' ? 'inscriere' : 'contact';
+    formData.append('type', mailType);
+
+    $("[type='text']").each(function () {
+        if (!$(this).val()) {
+            $(this).addClass('error');
+            errors++;
+        } else {
+            $(this).removeClass('error');
+            formData.append(this.name, this.value);
+        }
+    });
+    if ($('#bifa').prop('checked') == false) {
+        $('#bifa').addClass('error');
+        errors++;
+    } else {
+        $('#bifa').removeClass('error');
+    }
+    if (errors == 0) {
+        $.ajax({
+            url: './smtp/send_email.php',
+            data: FormData,
+            type: 'POST',
+            success: function (res) {
+                if (res.ok) {
+                    $('#msg').addClass('ok').html(res);
+                } else {
+                    $('#msg').addClass('error').html(res);
+                }
+            },
+        }).finally(function () {
+            setTimeout(() => {
+                $('#msg').hide();
+                button.disabled = true;
+                $(button).removeClass('sending');
+            }, 3000);
+        });
+    }
 }

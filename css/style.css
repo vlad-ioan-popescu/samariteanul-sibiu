@@ -661,7 +661,7 @@ nav {
 footer {
     background-color: var(--clr-lightblue);
     min-height: 200px;
-    margin-top: -50px;
+    margin-top: -51px;
 }
 #footer-container img {
     position: relative;
@@ -916,18 +916,38 @@ textarea {
     inset: 0;
     top: -20px;
 }
-#sendButton {
+#enrollButton,
+#contactButton {
     display: flex;
     gap: 10px;
     max-width: fit-content;
     height: fit-content;
     align-items: center;
 }
-#sendButton img {
+#enrollButton img,
+#contactButton img {
     display: none;
 }
-#sendButton.sending img {
+#enrollButton.sending img,
+#contactButton.sending img {
     display: inline;
+}
+.error {
+    background-color: #ffefea;
+}
+#msg {
+    display: none;
+    width: 100%;
+    padding: 5px 10px;
+}
+#msg.ok {
+    background-color: #e7fee4;
+}
+span.ok {
+    color: var(--clr-darkgreen);
+}
+span.not-ok {
+    color: var(--clr-red);
 }
 
 #tarif {
