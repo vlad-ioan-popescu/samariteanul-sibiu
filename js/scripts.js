@@ -64,9 +64,8 @@ function moveClouds() {
 }
 
 //  validari formular (erori)
-
 $("[type='text'], textarea").on('blur', function () {
-    if (!this.value) {
+    if (this.value.length < 3 || ($(this).is('#email') && !validEmail(this.value))) {
         $(this).addClass('error');
     } else {
         $(this).removeClass('error');
@@ -81,14 +80,13 @@ $('#bifa').on('click', function () {
 });
 // validare si trimitere formular
 function sendForm(button) {
-    $(button).addClass('sending');
     let errors = 0;
     let formData = new FormData();
-    const mailType = $(this).attr('id') == 'enrollButton' ? 'inscriere' : 'contact';
+    const mailType = $(button).is('#enrollButton') ? 'inscriere' : 'contact';
     formData.append('type', mailType);
 
-    $("[type='text']").each(function () {
-        if (!$(this).val()) {
+    $("[type='text'], textarea").each(function () {
+        if (this.value.length < 3 || ($(this).is('#email') && !validEmail(this.value))) {
             $(this).addClass('error');
             errors++;
         } else {
@@ -96,6 +94,7 @@ function sendForm(button) {
             formData.append(this.name, this.value);
         }
     });
+
     if ($('#bifa').prop('checked') == false) {
         $('#bifa').addClass('error');
         errors++;
@@ -103,23 +102,32 @@ function sendForm(button) {
         $('#bifa').removeClass('error');
     }
     if (errors == 0) {
-        $.ajax({
-            url: './smtp/send_email.php',
-            data: FormData,
-            type: 'POST',
-            success: function (res) {
-                if (res.ok) {
-                    $('#msg').addClass('ok').html(res);
+        $(button).addClass('sending');
+        fetch('/smtp/send_email.php', {
+            body: formData,
+            method: 'POST',
+        })
+            .then(res => res.text())
+            .then(html => {
+                if (html) {
+                    $('#msg').addClass('ok').html(html);
                 } else {
-                    $('#msg').addClass('error').html(res);
+                    $('#msg').addClass('error').html(html);
                 }
-            },
-        }).finally(function () {
-            setTimeout(() => {
-                $('#msg').hide();
-                button.disabled = true;
-                $(button).removeClass('sending');
-            }, 3000);
-        });
+            })
+            .finally(function () {
+                $('#msg').show();
+                setTimeout(() => {
+                    $('#msg').hide();
+                    $(button).addClass('disabled');
+                    $(button).removeClass('sending');
+                }, 3000);
+            });
     }
+}
+
+// validare email
+function validEmail(email) {
+    const pattern = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+    return pattern.test(email);
 }

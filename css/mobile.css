@@ -634,25 +634,40 @@ textarea {
 }
 #bifa:checked::after {
     content: '✔';
-    font-size: 3.5rem;
+    font-size: 3rem;
     position: absolute;
     inset: 0;
     top: -20px;
 }
-#sendButton {
-    display: flex;
-    gap: 10px;
-    max-width: fit-content;
-    height: fit-content;
-    align-items: center;
-}
-#sendButton img {
+form a img {
     display: none;
 }
-#sendButton.sending img {
+form a.sending img {
     display: inline;
 }
-
+form a.disabled {
+    background-color: #666;
+    color: #fff;
+    pointer-events: none;
+    cursor: default;
+}
+input.error {
+    background-color: #ffecef;
+}
+#msg {
+    display: none;
+    width: 100%;
+    padding: 5px 10px;
+}
+#msg.ok {
+    background-color: #e7fee4;
+}
+span.ok {
+    color: var(--clr-darkgreen);
+}
+span.not-ok {
+    color: var(--clr-red);
+}
 /************** PAGINA DE CONTACT **********/
 .hero-contact-separator {
     position: absolute;

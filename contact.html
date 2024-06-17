@@ -125,17 +125,18 @@
                     </div>
                     <div class="right" id="contact-form">
                         <form>
-                            <label for="#nume">Numele și prenumele </label>
-                            <input type="text" name="nume" />
-                            <label for="#telefon">Numărul de telefon</label>
-                            <input type="text" name="telefon" />
-                            <label for="#email">Adresa de email</label>
-                            <input type="text" name="email" />
-                            <label for="#mesaj">Mesaj</label>
+                            <label for="nume">Numele și prenumele </label>
+                            <input type="text" name="nume" id="nume" />
+                            <label for="telefon">Numărul de telefon</label>
+                            <input type="text" name="telefon" id="telefon" />
+                            <label for="email">Adresa de email</label>
+                            <input type="text" name="email" id="email" />
+                            <label for="mesaj">Mesaj</label>
                             <textarea name="mesaj" id="mesaj" rows="6"></textarea>
                             <br />
                             <a id="contactButton" href="javascript:;" onclick="sendForm(this);" class="button pink">Trimite<img src="img/spinner.gif" alt="loading spinner" /></a>
                         </form>
+                        <div id="msg"></div>
                     </div>
                 </div>
 

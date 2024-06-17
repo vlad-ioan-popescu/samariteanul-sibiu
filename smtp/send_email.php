@@ -10,6 +10,8 @@ if (isset($_POST) || isset($_GET['test'])) {
     foreach ($_POST as $key => $value) {
         $$key = $value;
     }
+    $parinte = !empty($parinte) ? $parinte : 'Vlad Popescu';
+    $copil = !empty($copil) ? $copil : 'Vlad Popescu';
     $nume = !empty($nume) ? $nume : 'Vlad Popescu';
     $email = !empty($email) ? $email : 'vladpopescu2004@gmail.com';
     $mesaj = !empty($mesaj) ? $mesaj : 'Mesaj test!';

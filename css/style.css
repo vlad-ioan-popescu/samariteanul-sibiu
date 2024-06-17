@@ -924,16 +924,20 @@ textarea {
     height: fit-content;
     align-items: center;
 }
-#enrollButton img,
-#contactButton img {
+form a img {
     display: none;
 }
-#enrollButton.sending img,
-#contactButton.sending img {
+form a.sending img {
     display: inline;
 }
-.error {
-    background-color: #ffefea;
+form a.disabled {
+    background-color: #666;
+    color: #fff;
+    pointer-events: none;
+    cursor: default;
+}
+input.error {
+    background-color: #ffecef;
 }
 #msg {
     display: none;
